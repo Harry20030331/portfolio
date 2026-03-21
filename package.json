@@ -1,0 +1,17 @@
+{
+  "name": "vcard-personal-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Personal portfolio — static HTML/CSS/JS",
+  "scripts": {
+    "dev": "live-server --port=5173 --open=/",
+    "preview": "serve -l 4173"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

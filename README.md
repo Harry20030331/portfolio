@@ -19,6 +19,18 @@ Before you begin, ensure you have met the following requirements:
 
 * [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
+For local preview with auto-reload, install [Node.js](https://nodejs.org/) **18+** (LTS recommended).
+
+## Local development
+
+```bash
+npm install
+npm run dev      # http://127.0.0.1:5173 — live reload while editing HTML/CSS/JS
+npm run preview  # http://127.0.0.1:4173 — static server without live reload
+```
+
+If you use [nvm](https://github.com/nvm-sh/nvm), run `nvm use` in this repo to match `.nvmrc` (Node 20).
+
 ## Installing vCard
 
 To install **vCard**, follow these steps:
