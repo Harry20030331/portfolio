@@ -1785,6 +1785,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 20px 25px;
   }
 
+  .service-list-three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   /* testimonials */
 
   .testimonials-item { min-width: calc(50% - 15px); }

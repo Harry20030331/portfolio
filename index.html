@@ -48,7 +48,7 @@
         <div class="info-content">
           <h1 class="name" title="Yuming (Harry) Feng">Yuming (Harry) Feng</h1>
 
-          <p class="title">AI Product Builder &amp; Robotics Researcher</p>
+          <p class="title">RecSys · LLM Agents · Robotics &amp; RL</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -193,8 +193,8 @@
           <p>
             Hi, everyone! I'm Yuming (Harry) Feng. As a current MS student in Electrical Engineering at Stanford
             University, I'm driven by the excitement of the AI era and motivated to push cutting-edge technology into
-            the real world. I'm especially passionate about LLM applications and robotics, where I love turning bold
-            ideas into practical, working systems that create real impact and benefit others.
+            the real world. My work spans recommendation systems, LLM agents, and robotics &amp; RL, where I
+            love turning bold ideas into practical, working systems that create real impact and benefit others.
           </p>
         </section>
 
@@ -207,16 +207,15 @@
 
           <h3 class="h3 service-title">What i'm doing</h3>
 
-          <ul class="service-list">
+          <ul class="service-list service-list-three">
 
             <li class="service-item">
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">LLMs &amp; alignment</h4>
+                <h4 class="h4 service-item-title">RecSys</h4>
 
                 <p class="service-item-text">
-                  SFT, DPO, RLAIF (PPO), RAG, evaluation design—from independent research to production-minded training
-                  and metrics.
+                  Ranking, retrieval, long-term value modeling, and evaluation for recommendation and discovery systems.
                 </p>
               </div>
 
@@ -225,11 +224,11 @@
             <li class="service-item">
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Agents &amp; product</h4>
+                <h4 class="h4 service-item-title">LLM Agents</h4>
 
                 <p class="service-item-text">
-                  <strong>Multi-stage LLM pipelines</strong> with ReAct / reflection architectures; prompt
-                  engineering and cost/latency optimization for real user workflows.
+                  Memory, tool use, multi-agent coordination, reinforcement learning from feedback, and evaluation for
+                  agentic systems.
                 </p>
               </div>
 
@@ -241,21 +240,8 @@
                 <h4 class="h4 service-item-title">Robotics &amp; RL</h4>
 
                 <p class="service-item-text">
-                  Multi-agent manipulation, sim-to-real RL, hierarchical control—published at ICRA and RSS; hands-on
-                  with MuJoCo, Isaac Gym, and distributed training stacks.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">ML systems</h4>
-
-                <p class="service-item-text">
-                  High-throughput RL platforms in JAX, GPU-parallel data pipelines, Docker/GCP—infra designed for
-                  <strong>compatibility</strong> and <strong>extensibility</strong>.
+                  Multi-agent robot learning, sim-to-real transfer, hierarchical control, and long-horizon planning for
+                  embodied systems.
                 </p>
               </div>
 
@@ -301,7 +287,7 @@
               <span>Sept. 2025 – Jun. 2027 (expected) · Stanford, USA</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Coursework: Deep Learning, Natural Language Processing with Deep Learning, Human-Centered LLMs, Apps with LLMs Inside</p>
+                <p class="timeline-text">Coursework: Deep Learning, Natural Language Processing with Deep Learning, Human-Centered LLMs, Apps with LLMs Inside, Understanding Users</p>
               </div>
 
             </li>
@@ -350,15 +336,53 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">AI product builder · IdeaWeave (self-employ)</h4>
+              <h4 class="h4 timeline-item-title">Recommendation algorithm intern · TikTok Live</h4>
 
-              <span>Dec. 2025 – Mar. 2026 · Stanford, USA</span>
-              <span>Self-employ · IdeaWeave</span>
+              <span>Jun. 2026 – Sep. 2026 · San Jose, USA</span>
+              <span>Internship · TikTok Live</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Built an AI-powered whiteboard for idea-to-presentation workflows. Implemented telemetry and prompt-iteration tooling, plus a four-stage pipeline (Planner→Judge→Executor→Validator) with ReAct-style tool use and reflection for plan/DSL updates.</p>
-                <p class="timeline-text">Cut cost ~87% and generation latency ~60% with a compact DSL, model routing, and prompt caching while keeping quality; shaped the intent→diagram→refine→record loop and personalization.</p>
-                <p class="timeline-text">Ran GTM with creator outreach and launch content (100K+ impressions, 300+ users in three weeks).</p>
+                <p class="timeline-text">Designed a TikTok Live long-term value ranking target for US For You mixed ranking, modeling user-creator "app-open reason for live" labels on T+1.</p>
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">AI product builder · AI Tutor</h4>
+
+              <span>Mar. 2026 – Jun. 2026 · Stanford, CA</span>
+              <span>Entrepreneurial project · AI Tutor</span>
+
+              <div class="timeline-body">
+                <p class="timeline-text">Built an end-to-end pipeline converting traditional tutoring PDFs into AI-ready corpora, using VLM/OCR parsing, structured Markdown normalization, corpus splitting, problem-bank construction, and embedding retrieval for grounded tutoring.</p>
+                <p class="timeline-text">Designed a curriculum-grounded agent system for Chinese math exams with structured solve outputs, problem-bank RAG, user-level memory, and a sandboxed drawing subagent for Python-generated SVG explanations.</p>
+                <p class="timeline-text">Built an exam-paper evaluation harness over recent regional exams, showing our agentic pipeline improved curriculum fit by 32% and correctness by 9% over the base frontier model.</p>
+              </div>
+
+              <div class="timeline-links-row">
+                <a href="https://testflight.apple.com/join/s5WwxNhZ" class="timeline-link" target="_blank" rel="noopener noreferrer">TestFlight</a>
+                <span class="timeline-link-sep" aria-hidden="true">·</span>
+                <a href="https://expo.dev/accounts/crazyharry/projects/ai-tutor/builds/4f3589d3-500e-4105-a6a8-6adb1f2811b0" class="timeline-link" target="_blank" rel="noopener noreferrer">Android</a>
+                <span class="timeline-link-sep" aria-hidden="true">·</span>
+                <a href="https://www.xiaohongshu.com/explore/6a210cc0000000003502c349?xsec_token=ABU3a7saFizq5yWWzhGgp1QH2DVZYRV9li806bL0p2pTg=&amp;xsec_source=pc_user" class="timeline-link" target="_blank" rel="noopener noreferrer">Chinese demo</a>
+                <span class="timeline-link-sep" aria-hidden="true">·</span>
+                <a href="https://www.youtube.com/watch?v=CfeKlJUtpjE" class="timeline-link" target="_blank" rel="noopener noreferrer">English demo</a>
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">AI product builder · IdeaWeave</h4>
+
+              <span>Dec. 2025 – Mar. 2026 · Stanford, USA</span>
+              <span>Entrepreneurial project · IdeaWeave</span>
+
+              <div class="timeline-body">
+                <p class="timeline-text">Launched a multi-agent diagram generation product that turns intent into editable diagrams through clarification, generation, canvas refinement, and one-click recording; reached 10K+ impressions and 300+ users.</p>
+                <p class="timeline-text">Designed a telemetry-driven iteration loop around the Planner-Judge-Executor-Validator agent architecture, capturing artifacts and failure modes to support systematic prompt/model debugging and workflow refinement.</p>
+                <p class="timeline-text">Reduced generation cost by about 87% and latency by about 60% through DSL compilation, model routing, and prompt caching while preserving output quality.</p>
               </div>
 
               <div class="timeline-links-row">
@@ -377,8 +401,9 @@
               <span>Internship · Galbot</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Built high-performance RL training on JAX and MuJoCo with a distributed pipeline that cut training time ~83% versus legacy PyTorch.</p>
-                <p class="timeline-text">Designed APIs and abstractions for heterogeneous sim tasks and documented the platform for fast team iteration.</p>
+                <p class="timeline-text">Consolidated fragmented training stacks across simulation backends and ML frameworks into a unified JAX + MuJoCo Playground platform, standardizing configuration and reducing cross-task maintenance.</p>
+                <p class="timeline-text">Validated the end-to-end ML workflow from policy training and simulation evaluation to deployment handoff, reducing training time by 37% versus the previous fragmented workflow.</p>
+                <p class="timeline-text">Documented configuration, debugging, and deployment handoff workflows to lower onboarding costs, standardize experiment transfer, and support cross-team integration.</p>
               </div>
 
             </li>
@@ -407,7 +432,9 @@
               <span>Independent research project under Stanford CS 224N</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Studied SFT→DPO alignment on paraphrase detection and Shakespeare-style generation using GPT-2 (124M), comparing full fine-tuning vs. LoRA.</p>
+                <p class="timeline-text">Built a reproducible evaluation harness for small-model LLM alignment, measuring task performance and optimization behavior across SFT, DPO, full fine-tuning, and LoRA under matched data and metric settings.</p>
+                <p class="timeline-text">Tested GPT-2 (124M) on paraphrase detection and sonnet generation, showing that DPO gains are limited in small-model, low-data regimes and depend on task format, data scale, and SFT baseline strength.</p>
+                <p class="timeline-text">Quantified adaptation trade-offs: full fine-tuning outperformed LoRA by about 3% Acc/F1, while LoRA enabled up to 2x larger batch sizes under the same compute budget.</p>
               </div>
 
               <div class="timeline-links-row">
@@ -446,8 +473,9 @@
               <span>Independent research project under Stanford CS 230</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Built a compact SciBERT-based model with FAISS retrieval augmentation and trained it end-to-end on task data for novelty estimation.</p>
-                <p class="timeline-text">Benchmarked our trained compact model against fine-tuned Qwen and a frontier zero-shot baseline; ours performed best, indicating that task-specific fine-tuning of a small model is enough to reach strong results on this task. Shipped a public web demo for real-time scoring.</p>
+                <p class="timeline-text">Formulated conceptual novelty estimation as a pairwise ranking problem rather than only binary classification, raising the evaluation ceiling from 32% F1 to 75% agreement.</p>
+                <p class="timeline-text">Built a retrieval-augmented LLM training pipeline where FAISS neighbors and LLM-generated similarity reports form comparison context; used SFT to teach Qwen3-4B the pairwise novelty-judgment format, then applied DPO on preference pairs to optimize ranking decisions.</p>
+                <p class="timeline-text">Benchmarked compact encoder models, fine-tuned Qwen3-4B, and zero-shot frontier models, showing that task-specific supervision and semantically aligned comparison pairs matter more than raw model scale.</p>
               </div>
 
               <div class="timeline-links-row">
@@ -478,32 +506,15 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">An empirical study of SFT-DPO interaction and parameterization in small language models</h4>
-
-              <span>arXiv preprint 2026</span>
-
-              <div class="timeline-body">
-                <p class="timeline-text">Yuming Feng, Christy Yang</p>
-              </div>
-
-              <div class="timeline-links-row">
-                <a href="https://arxiv.org/abs/2603.20100" class="timeline-link" target="_blank" rel="noopener noreferrer">Paper</a>
-                <span class="timeline-link-sep" aria-hidden="true">·</span>
-                <a href="https://github.com/Harry20030331/cs224n_project" class="timeline-link" target="_blank" rel="noopener noreferrer">Code</a>
-              </div>
-
-            </li>
-
-            <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">Multi-agent long-horizon quadrupedal pushing</h4>
 
               <span>Feb. 2024 – Oct. 2024 · Pittsburgh, USA</span>
               <span>Advised by Prof. Ding Zhao (CMU) and Prof. Jie Tan (Google DeepMind)</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Proposed and developed a three-level hierarchical MARL framework for long-horizon, collaborative quadrupedal pushing in obstacle-cluttered environments.</p>
-                <p class="timeline-text">Benchmarked against baselines: +36.0% success and −24.5% completion time vs. the best baseline. Deployed on real quadrupeds for Push-T and Push-Cuboid over 10–20 m (~0.5 m/s) with obstacle-aware coordinated whole-body motion.</p>
+                <p class="timeline-text">Proposed a three-level hierarchical MARL framework for long-horizon quadrupedal pushing: RRT plus a centralized adaptive policy generates object subgoals, a decentralized goal-conditioned policy coordinates quadrupeds, and a pretrained locomotion policy executes local motion, improving success rate by 36.0% and reducing completion time by 24.5% over best baselines.</p>
+                <p class="timeline-text">Designed an Occlusion-Based (OCB) reward to guide agents toward better contact points on the target object, improving average success rate by 49.5% in ablation.</p>
+                <p class="timeline-text">Enabled Sim2Real transfer using friction-based domain randomization and deployed the policy on real Unitree Go1 Team, pushing T-shaped blocks and cubes for 10-20 m at 0.5 m/s.</p>
                 <p class="timeline-text">Published at IEEE ICRA 2025.</p>
               </div>
 
@@ -525,8 +536,9 @@
               <span>Advised by Prof. Meng Guo, Peking University</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Addressed collaborative planar pushing of polytopic objects in obstacle-cluttered scenes via hybrid optimization over contact modes and pushing forces, paired with a hierarchical hybrid search that decomposes paths and selects feasible parameterized modes.</p>
-                <p class="timeline-text">Applied nonlinear MPC on each mobile robot to track desired pushing velocities online. Validated in high-fidelity simulation and hardware and demonstrated robustness to motion and actuation uncertainty.</p>
+                <p class="timeline-text">Proposed a hybrid search algorithm that decomposes mode sequences and navigation paths to generate feasible cluttered-scene pushing trajectories, reducing execution time by 18% and improving trajectory smoothness by 67.8% over uniform path partitioning.</p>
+                <p class="timeline-text">Proposed a fast, scalable multi-agent contact-mode switching algorithm; used the intermediate value theorem to prove 100% collision-free switching and establish a theoretical time bound for a single mode switch.</p>
+                <p class="timeline-text">Validated the planning-control pipeline in PyBullet with 100% multi-scenario success and approximately 0.03 m simulation tracking error, then deployed it on ROS hardware with less than 0.05 m tracking error.</p>
                 <p class="timeline-text">Published at Robotics: Science and Systems (RSS) 2024.</p>
               </div>
 
@@ -623,6 +635,24 @@
         <section class="projects">
 
           <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="ai product">
+              <a href="https://www.youtube.com/watch?v=CfeKlJUtpjE" target="_blank" rel="noopener noreferrer">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="https://img.youtube.com/vi/CfeKlJUtpjE/hqdefault.jpg" alt="AI Tutor curriculum-grounded agent tutoring system" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">AI Tutor</h3>
+
+                <p class="project-category">AI Product</p>
+
+              </a>
+            </li>
 
             <li class="project-item  active" data-filter-item data-category="ai product">
               <a href="https://ideawiv.com/" target="_blank" rel="noopener noreferrer">
