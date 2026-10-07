@@ -54,3 +54,17 @@ If you want to contact me you can reach me at [Twitter](https://www.x.com/codewi
 ## License
 
 MIT
+
+## Blog build and Pages deployment
+
+Use Node 22+ and pnpm 11.19.0. Run `pnpm install`, then:
+
+- `pnpm test` — article selection, rendering and output-isolation checks.
+- `pnpm run check:privacy` — tracked-content policy check.
+- `pnpm run build` — published articles only, generated under `dist/`.
+- `pnpm run preview:community` — explicitly includes the Community draft for the authorized layout review; its source remains `status: draft`.
+- `pnpm exec playwright install chromium` then `pnpm run test:browser` — desktop/mobile checks and ignored screenshots.
+
+Serve `dist/` for local previews, rather than the source root. Blog content lives in `content/blog/`; the Community diagram's approved public copy is under `website/assets/blog/community/`.
+
+GitHub Pages uses **GitHub Actions**, not branch-root publishing. Manually run **Build and publish portfolio**. Enable `preview_community` only when the Community layout preview is approved for public display. The workflow tests, builds and uploads only `dist/`; source files, editorial notes and other drafts are not deployment artifacts. A draft preview has a visible label and `noindex,nofollow`, but is publicly readable at its URL. It is not a private review environment.
