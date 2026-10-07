@@ -34,6 +34,19 @@ try {
   await page.screenshot({path:path.join(root,'.preview/screenshots',name+'-article.png'),fullPage:true});
   await page.getByRole('link',{name:'← Blog',exact:true}).click();
   await page.getByRole('link',{name:/Community: Building/}).waitFor();
+  if (fs.existsSync(path.join(root,'content/blog/ideaweave-llm-systems.md'))) {
+    await page.getByRole('link',{name:/IdeaWeave, Part I:/}).click();
+    await page.getByRole('heading',{level:1,name:/Part I:/}).waitFor();
+    await page.evaluate(() => document.fonts.ready);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true);
+    await page.screenshot({path:path.join(root,'.preview/screenshots',name+'-ideaweave-part-1.png')});
+    await page.getByRole('link',{name:'Part II: Building with LLMs',exact:true}).first().click();
+    await page.getByRole('heading',{level:1,name:/Part II:/}).waitFor();
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true);
+    await page.screenshot({path:path.join(root,'.preview/screenshots',name+'-ideaweave-part-2.png')});
+    await page.getByRole('link',{name:'Part I: Product and Engineering Judgment',exact:true}).click();
+    await page.getByRole('heading',{level:1,name:/Part I:/}).waitFor();
+  }
   await page.close();
  }
  console.log('Desktop and mobile navigation, assets, social links and article layout passed.');
