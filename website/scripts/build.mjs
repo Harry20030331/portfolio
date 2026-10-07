@@ -45,7 +45,7 @@ export function renderBody(post) {
 }
 export function build({preview,output = path.join(root,'dist')} = {}) {
   const posts = fs.readdirSync(path.join(root,'content/blog')).filter(f => f.endsWith('.md') && f !== 'README.md' && f !== 'editorial-notes.md').map(f => readPost(fs.readFileSync(path.join(root,'content/blog',f),'utf8')));
-  const selected = selectPosts(posts, preview).sort((a,b) => b.date.localeCompare(a.date));
+  const selected = selectPosts(posts, preview).sort((a,b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
   if (new Set(selected.map(p=>p.slug)).size !== selected.length) throw new Error('Duplicate article slug');
   // Remove only the known generated output, never arbitrary user paths.
   const resolved=path.resolve(output);
@@ -61,7 +61,7 @@ export function build({preview,output = path.join(root,'dist')} = {}) {
   for (const post of selected) {
     const dir=path.join(output,'blog',post.slug);fs.mkdirSync(dir,{recursive:true});
     const body=renderBody(post);
-    const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(post.title)} — Yuming Feng</title><meta name="description" content="${escape(post.summary)}">${post.status==='draft'?'<meta name="robots" content="noindex,nofollow">':''}<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../assets/css/style.css?v=5"><link rel="stylesheet" href="../../website/blog.css?v=1"></head><body class="blog-reading"><div class="reading-wrap"><nav class="reading-nav"><a href="../../">Yuming Feng</a><a href="../../#blog">← Blog</a></nav><main class="reading-main"><header class="reading-header"><p class="reading-meta"><time datetime="${post.date}">${post.date}</time>${post.status==='draft'?' · Draft · layout preview':''}</p><h1>${escape(post.title)}</h1></header><article class="reading-content">${body}</article></main><footer class="reading-footer"><a href="../../#blog">← All articles</a></footer></div></body></html>`;
+    const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(post.title)} — Yuming Feng</title><meta name="description" content="${escape(post.summary)}">${post.status==='draft'?'<meta name="robots" content="noindex,nofollow">':''}<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../assets/css/style.css?v=5"><link rel="stylesheet" href="../../website/blog.css?v=2"></head><body class="blog-reading"><div class="reading-wrap"><nav class="reading-nav"><a href="../../">Yuming Feng</a><a href="../../#blog">← Blog</a></nav><main class="reading-main"><header class="reading-header"><p class="reading-meta"><time datetime="${post.date}">${post.date}</time>${post.status==='draft'?' · Draft · layout preview':''}</p><h1>${escape(post.title)}</h1></header><article class="reading-content">${body}</article></main><footer class="reading-footer"><a href="../../#blog">← All articles</a></footer></div></body></html>`;
     fs.writeFileSync(path.join(dir,'index.html'),html);
   }
   fs.writeFileSync(path.join(output,'.nojekyll'),'');
