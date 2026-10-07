@@ -47,3 +47,6 @@
  .reading-content th, .reading-content td { min-width:155px; padding:12px; }
  .blog-reading .reading-content { font-size:15px; line-height:1.9; }
 }
+
+.reading-content h4, .reading-content h5, .reading-content h6 { color:var(--white-2); font-size:17px; line-height:1.6; font-weight:500; margin:24px 0 12px; }
+.reading-content hr { border:0; border-top:1px solid var(--jet); margin:28px 0; }
