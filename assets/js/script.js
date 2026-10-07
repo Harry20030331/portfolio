@@ -99,3 +99,11 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+// Direct links to the Blog list, including return links from articles.
+function showBlogFromHash() {
+  if (location.hash === '#blog') {
+    [...navigationLinks].find(link => link.textContent.trim().toLowerCase() === 'blog')?.click();
+  }
+}
+window.addEventListener('hashchange', showBlogFromHash);
+showBlogFromHash();
