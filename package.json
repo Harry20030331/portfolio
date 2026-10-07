@@ -2,16 +2,28 @@
   "name": "vcard-personal-portfolio",
   "private": true,
   "version": "1.0.0",
-  "description": "Personal portfolio — static HTML/CSS/JS",
+  "description": "Personal portfolio \u2014 static HTML/CSS/JS",
   "scripts": {
     "dev": "live-server --port=5173 --open=/",
-    "preview": "serve -l 4173"
+    "preview": "serve -l 4173",
+    "build": "node website/scripts/build.mjs",
+    "preview:community": "node website/scripts/build.mjs --preview=community",
+    "check:privacy": "node website/scripts/check-privacy.mjs",
+    "test": "node --test website/tests/build.test.mjs",
+    "test:browser": "node website/tests/browser.mjs"
   },
   "devDependencies": {
     "live-server": "^1.2.2",
-    "serve": "^14.2.4"
+    "serve": "^14.2.4",
+    "marked": "17.0.5",
+    "playwright": "1.62.1"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "fsevents"
+    ]
   }
 }
