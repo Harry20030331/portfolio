@@ -15,7 +15,7 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css?v=4">
+  <link rel="stylesheet" href="./assets/css/style.css?v=5">
 
   <!--
     - google font link
@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./website/blog.css?v=1">
 </head>
 
 <body>
@@ -121,13 +122,19 @@
 
           <li class="social-item">
             <a href="https://x.com/FengYuming5957" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X">
-              <ion-icon name="logo-twitter"></ion-icon>
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
             </a>
           </li>
 
           <li class="social-item">
             <a href="https://github.com/Harry20030331" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?user=eaoj2WsAAAAJ&amp;hl=en" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
             </a>
           </li>
 
@@ -169,6 +176,10 @@
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Project</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
           </li>
 
         </ul>
@@ -796,6 +807,11 @@
         </section>
 
       </article>
+
+      <article class="blog" data-page="blog">
+        <header><h2 class="h2 article-title">Blog</h2></header>
+        <section class="blog-list" aria-label="Blog posts"><!-- BLOG_POSTS --></section>
+      </article>
     </div>
 
   </main>
@@ -808,7 +824,7 @@
   <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js?v=4"></script>
+  <script src="./assets/js/script.js?v=5"></script>
 
   <!--
     - ionicon link

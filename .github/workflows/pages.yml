@@ -1,0 +1,55 @@
+name: Build and publish portfolio
+on:
+  workflow_dispatch:
+    inputs:
+      preview_community:
+        description: Include the authorized Community draft for layout review
+        type: boolean
+        required: true
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm run check:privacy
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm run test:browser
+      - name: Build approved pages
+        env:
+          PREVIEW_COMMUNITY: ${{ inputs.preview_community }}
+        run: |
+          if [ "$PREVIEW_COMMUNITY" = true ]; then
+            pnpm run preview:community
+          else
+            pnpm run build
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
