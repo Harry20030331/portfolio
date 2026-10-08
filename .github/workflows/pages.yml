@@ -1,5 +1,8 @@
 name: Build and publish portfolio
 on:
+  push:
+    branches: [main]
+    paths: [.github/release.json]
   workflow_dispatch:
     inputs:
       preview_community:
@@ -17,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -32,7 +37,9 @@ jobs:
         env:
           PREVIEW_COMMUNITY: ${{ inputs.preview_community }}
         run: |
-          if [ "$PREVIEW_COMMUNITY" = true ]; then
+          if [ "$GITHUB_EVENT_NAME" = push ]; then
+            node website/scripts/release.mjs --build
+          elif [ "$PREVIEW_COMMUNITY" = true ]; then
             pnpm run preview:community
           else
             pnpm run build

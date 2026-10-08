@@ -1,12 +1,10 @@
 ---
 title: "IdeaWeave, Part I: Product and Engineering Judgment"
 slug: "ideaweave"
-date: "2026-10-07"
+date: "2026-03-05"
 summary: "Reflections on product value, engineering judgment, context, and system discipline from building IdeaWeave."
 status: published
 ---
-
-*CS 224G course project · Original reflection written March 5, 2026.*
 
 Part I covers product value and engineering judgment. The technical lessons continue in [Part II: Building with LLMs](../ideaweave-llm-systems/).
 

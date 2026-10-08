@@ -18,7 +18,7 @@ test('build packages approved public content and preserves article status',()=>{
  const output=path.join(root,'.preview/test-build');build({preview:'community',output});
  assert.match(fs.readFileSync(path.join(output,'index.html'),'utf8'),/blog\/community/);
  const article=fs.readFileSync(path.join(output,'blog/community/index.html'),'utf8');
- assert.match(article,/Draft · layout preview/);assert.match(article,/table-scroll/);
+ assert.match(article,/<meta name="robots" content="noindex,nofollow">/);assert.match(article,/table-scroll/);
  assert.match(article,/assets\/blog\/community\/community-path.svg/);
  for(const file of ['content','AGENTS.md','package.json','.git']) assert.equal(fs.existsSync(path.join(output,file)),false);
  assert.equal(fs.readFileSync(path.join(root,'content/blog/community.md'),'utf8'),source);

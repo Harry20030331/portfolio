@@ -1,12 +1,10 @@
 ---
 title: "IdeaWeave, Part II: Building with LLMs"
 slug: "ideaweave-llm-systems"
-date: "2026-10-07"
+date: "2026-03-05"
 summary: "Technical lessons on latency, cost, task partitioning, model\u2013tool boundaries, interfaces, and prompting."
 status: published
 ---
-
-*CS 224G course project · Original reflection written March 5, 2026.*
 
 IdeaWeave turns user intent into editable diagrams. This second part collects the technical lessons from building its LLM system: latency and cost, capability boundaries, model–tool division of labor, task partitioning, interfaces, and prompting.
 

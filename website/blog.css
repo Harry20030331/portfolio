@@ -6,7 +6,6 @@
 .blog-row p { margin-top:8px; color:var(--light-gray-70); font-size:14px; line-height:1.8; }
 .blog-row time { flex:none; padding-top:5px; color:var(--light-gray-70); font-size:12px; white-space:nowrap; }
 .blog-row:hover h3 { color:var(--orange-yellow-crayola); }
-.draft-label { color:var(--vegas-gold); font-size:11px; margin-top:10px; }
 .blog-empty { color:var(--light-gray-70); padding:12px 0; }
 .blog-reading { color:var(--light-gray); font-weight:400; }
 .reading-wrap { max-width:880px; padding:0 32px; margin:0 auto; }
@@ -14,8 +13,8 @@
 .reading-nav a, .reading-footer a { color:var(--light-gray-70); }
 .reading-nav a:hover, .reading-footer a:hover { color:var(--orange-yellow-crayola); }
 .blog-reading .reading-main { display:block; margin:0; padding:0; width:100%; min-width:0; }
-.reading-header { padding:54px 0 28px; }
-.reading-meta { font-size:12px; color:var(--light-gray-70); margin-bottom:18px; }
+.reading-header { padding:48px 0 36px; }
+.reading-meta { font-size:13px; line-height:1.6; color:var(--light-gray-70); margin:16px 0 0; }
 .reading-meta time { display:inline; }
 .reading-header h1 { color:var(--white-1); font-size:clamp(29px,4vw,40px); font-weight:600; line-height:1.35; letter-spacing:-.8px; }
 .blog-reading .reading-content { display:block; border:0; border-radius:0; box-shadow:none; background:none; padding:0; width:100%; font-size:16px; line-height:1.95; }
@@ -43,10 +42,45 @@
  .blog-row { flex-direction:column; gap:8px; }
  .reading-wrap { padding:0 20px; }
  .reading-nav { padding:24px 0; }
- .reading-header { padding:36px 0 24px; }
+ .reading-header { padding:36px 0 28px; }
  .reading-content th, .reading-content td { min-width:155px; padding:12px; }
  .blog-reading .reading-content { font-size:15px; line-height:1.9; }
 }
 
 .reading-content h4, .reading-content h5, .reading-content h6 { color:var(--white-2); font-size:17px; line-height:1.6; font-weight:500; margin:24px 0 12px; }
 .reading-content hr { border:0; border-top:1px solid var(--jet); margin:28px 0; }
+
+/* Keep the paired maintenance loops horizontal and readable on narrow screens. */
+@media(max-width:600px) {
+ .reading-content figure:has(img[src$="maintenance-en.svg"]) { overflow-x:auto; }
+ .reading-content img[src$="maintenance-en.svg"] { min-width:760px; margin:0; }
+}
+
+@media(max-width:600px) {
+ .reading-content figure:has(img[src$="workflow-comparison.svg"]) { overflow-x:auto; }
+ .reading-content img[src$="workflow-comparison.svg"] { min-width:1000px; margin:0; }
+}
+
+@media(max-width:600px) {
+ .reading-content figure:has(img[src$="architecture-en.svg"]) { overflow-x:auto; }
+ .reading-content img[src$="architecture-en.svg"] { min-width:900px; margin:0; }
+}
+
+/* Explicit editorial review state, separate from draft/published status. */
+.blog-row-title { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; }
+.blog-review-status { flex:none; color:var(--orange-yellow-crayola); font-size:11px; font-weight:400; line-height:1.5; white-space:nowrap; }
+
+/* Preserve the paired sidebar and thread view on narrow screens. */
+@media(max-width:600px) {
+ .reading-content figure:has(img[src$="role-sidebar.svg"]) { overflow-x:auto; }
+ .reading-content img[src$="role-sidebar.svg"] { min-width:1000px; margin:0; }
+}
+
+/* Keep both input paths readable on narrow screens. */
+@media(max-width:600px) {
+ .reading-content figure:has(img[src$="input-paths.svg"]) { overflow-x:auto; }
+ .reading-content img[src$="input-paths.svg"] { min-width:950px; margin:0; }
+}
+
+/* Cite the book title within an article heading or list title. */
+.reading-header h1 cite, .blog-row h3 cite { display:inline; font-style:italic; font-weight:inherit; color:inherit; }

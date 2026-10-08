@@ -22,18 +22,18 @@ try {
  for(const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]) {
   const page=await browser.newPage({viewport:{width,height}});
   await page.goto(base+'/#blog');
-  await page.getByRole('link',{name:/Community: Building/}).waitFor();
+  await page.locator('a.blog-row[href="./blog/community/"]').waitFor();
   await page.screenshot({path:path.join(root,'.preview/screenshots',name+'-list.png'),fullPage:true});
   assert.equal(await page.locator('[aria-label="Google Scholar"]').getAttribute('href'),'https://scholar.google.com/citations?user=eaoj2WsAAAAJ&hl=en');
-  await page.getByRole('link',{name:/Community: Building/}).click();
+  await page.locator('a.blog-row[href="./blog/community/"]').click();
   await page.getByRole('heading',{level:1}).waitFor();
   await page.locator('img').waitFor();
   assert.equal(await page.locator('img').evaluate(img=>img.complete&&img.naturalWidth>0),true);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,'article page must not overflow');
   assert.equal(await page.locator('.sidebar').count(),0);
   await page.screenshot({path:path.join(root,'.preview/screenshots',name+'-article.png'),fullPage:true});
-  await page.getByRole('link',{name:'← Blog',exact:true}).click();
-  await page.getByRole('link',{name:/Community: Building/}).waitFor();
+  await page.getByRole('navigation').getByRole('link',{name:'← All Article',exact:true}).click();
+  await page.locator('a.blog-row[href="./blog/community/"]').waitFor();
   if (fs.existsSync(path.join(root,'content/blog/ideaweave-llm-systems.md'))) {
     await page.getByRole('link',{name:/IdeaWeave, Part I:/}).click();
     await page.getByRole('heading',{level:1,name:/Part I:/}).waitFor();
@@ -46,6 +46,17 @@ try {
     await page.screenshot({path:path.join(root,'.preview/screenshots',name+'-ideaweave-part-2.png')});
     await page.getByRole('link',{name:'Part I: Product and Engineering Judgment',exact:true}).click();
     await page.getByRole('heading',{level:1,name:/Part I:/}).waitFor();
+  }
+  for (const slug of ['silicon-valley-journal','silicon-valley-journal-part-2','silicon-valley-journal-zh','silicon-valley-journal-part-2-zh']) {
+    if (!fs.existsSync(path.join(output,'blog',slug))) continue;
+    await page.goto(base+'/blog/'+slug+'/');
+    assert.equal(await page.locator('.reading-content h2').count(),4);
+    assert.equal(await page.locator('time').getAttribute('datetime'),'2026-06-19');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true);
+    assert.equal(await page.locator('body').innerText().then(text=>text.includes('Pending review')),false);
+    for (const href of await page.locator('.reading-content a').evaluateAll(links=>links.map(a=>a.href))) {
+      assert.equal((await page.request.get(href)).status(),200,'journal language and part links must resolve');
+    }
   }
   await page.close();
  }
