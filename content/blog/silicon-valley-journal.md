@@ -5,6 +5,7 @@ date: "2026-06-19"
 summary: "Nine months at Stanford, seen through a café, project presentations, an inbox, and AI ads at the bus stop."
 lang: "en"
 status: published
+translation_zh: silicon-valley-journal-zh
 ---
 
 [中文版](../silicon-valley-journal-zh/) · [Part II →](../silicon-valley-journal-part-2/)

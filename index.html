@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./website/blog.css?v=2">
+  <link rel="stylesheet" href="./website/blog.css?v=3">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
         <div class="info-content">
           <h1 class="name" title="Yuming (Harry) Feng">Yuming (Harry) Feng</h1>
 
-          <p class="title">RecSys · LLM Agents · Robotics &amp; RL</p>
+          <p class="title">Agents · Robotics &amp; RL</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -202,10 +202,16 @@
 
         <section class="about-text">
           <p>
-            Hi, everyone! I'm Yuming (Harry) Feng. As a current MS student in Electrical Engineering at Stanford
-            University, I'm driven by the excitement of the AI era and motivated to push cutting-edge technology into
-            the real world. My work spans recommendation systems, LLM agents, and robotics &amp; RL, where I
-            love turning bold ideas into practical, working systems that create real impact and benefit others.
+            I'm Yuming (Harry) Feng, an MS student in Electrical Engineering at Stanford University.
+          </p>
+          <p>
+            I'm interested in self-improving agent systems grounded in domain knowledge and real-world workflows:
+            systems that learn from experience, refine their skills, and turn that learning into practical value.
+            My focus is on the system design, memory, and evaluation that make this possible.
+          </p>
+          <p>
+            Ultimately, I want to expand human creativity through intelligent systems that learn and act across
+            the digital and physical worlds, helping people bring ambitious ideas to life.
           </p>
         </section>
 
@@ -216,46 +222,28 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+          <h3 class="h3 service-title">What I'm Doing</h3>
 
-          <ul class="service-list service-list-three">
+          <ul class="service-list">
 
             <li class="service-item">
-
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">RecSys</h4>
-
+                <h4 class="h4 service-item-title">Self-Improving Agents</h4>
                 <p class="service-item-text">
-                  Ranking, retrieval, long-term value modeling, and evaluation for recommendation and discovery systems.
+                  Building agents that learn from experience, retain useful knowledge, and improve their workflows
+                  through feedback and evaluation.
                 </p>
               </div>
-
             </li>
 
             <li class="service-item">
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">LLM Agents</h4>
-
-                <p class="service-item-text">
-                  Memory, tool use, multi-agent coordination, reinforcement learning from feedback, and evaluation for
-                  agentic systems.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Robotics &amp; RL</h4>
-
                 <p class="service-item-text">
-                  Multi-agent robot learning, sim-to-real transfer, hierarchical control, and long-horizon planning for
-                  embodied systems.
+                  Learning-based control and coordination for robots, with a focus on multi-agent systems and
+                  sim-to-real transfer.
                 </p>
               </div>
-
             </li>
 
           </ul>
@@ -347,28 +335,32 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Recommendation algorithm intern · TikTok Live</h4>
+              <h4 class="h4 timeline-item-title">Machine Learning Engineer Intern, Agent Systems · TikTok</h4>
 
-              <span>Jun. 2026 – Sep. 2026 · San Jose, USA</span>
-              <span>Internship · TikTok Live</span>
+              <span>Jun. 2026 – Sep. 2026 · San Jose, California, USA · On-site</span>
+              <span>Internship · TikTok</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Designed a TikTok Live long-term value ranking target for US For You mixed ranking, modeling user-creator "app-open reason for live" labels on T+1.</p>
+                <p class="timeline-text">Brought self-improving agents into TikTok LIVE recommendation research, supporting data queries, experiment analysis, and ranking diagnosis.</p>
+                <p class="timeline-text">Built an Auto Research Agent Harness with persistent Leads coordinating research and scoped Workers executing tasks. Integrated internal-platform MCP interfaces with semantic, episodic, and procedural memory, using snapshots and indexes for on-demand context loading.</p>
+                <p class="timeline-text">Built an evaluation system for harness and skill updates using replayable virtual environments derived from historical task snapshots. Injected permission failures and API drift to test skill routing, API invocation, and parameter binding, achieving over 90% exact invocation accuracy.</p>
+                <p class="timeline-text">Applied the harness to a next-day user-creator LTV project that improved adjusted live watch duration by 0.58% in A/B testing. A comparison across standard research modules showed 49% less human support time.</p>
               </div>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">AI product builder · AI Tutor</h4>
+              <h4 class="h4 timeline-item-title">Forward Deployed AI Engineer, AI Tutor</h4>
 
-              <span>Mar. 2026 – Jun. 2026 · Stanford, CA</span>
-              <span>Entrepreneurial project · AI Tutor</span>
+              <span>Mar. 2026 – Jun. 2026 · Remote</span>
+              <span>Part-time · Nanjing Weiyou Education</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Built an end-to-end pipeline converting traditional tutoring PDFs into AI-ready corpora, using VLM/OCR parsing, structured Markdown normalization, corpus splitting, problem-bank construction, and embedding retrieval for grounded tutoring.</p>
-                <p class="timeline-text">Designed a curriculum-grounded agent system for Chinese math exams with structured solve outputs, problem-bank RAG, user-level memory, and a sandboxed drawing subagent for Python-generated SVG explanations.</p>
-                <p class="timeline-text">Built an exam-paper evaluation harness over recent regional exams, showing our agentic pipeline improved curriculum fit by 32% and correctness by 9% over the base frontier model.</p>
+                <p class="timeline-text">Collaborated with Nanjing Weiyou Education to build AI Tutor, a curriculum-grounded math tutoring system for Chinese junior-high entrance exam preparation.</p>
+                <p class="timeline-text">Built an end-to-end pipeline from tutoring PDFs to a searchable problem bank, combining VLM/OCR parsing, structured content processing, and embedding retrieval.</p>
+                <p class="timeline-text">Developed a tutoring agent with curriculum-grounded retrieval, structured solutions, learner memory, and a sandboxed drawing agent for SVG explanations.</p>
+                <p class="timeline-text">Evaluated the system on 100+ questions from five years of Nanjing entrance exams; improved curriculum alignment by 32% and correctness by 9% relative to the strongest base model tested.</p>
               </div>
 
               <div class="timeline-links-row">
@@ -385,14 +377,15 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">AI product builder · IdeaWeave</h4>
+              <h4 class="h4 timeline-item-title">AI Product Builder · IdeaWeave</h4>
 
-              <span>Dec. 2025 – Mar. 2026 · Stanford, USA</span>
-              <span>Entrepreneurial project · IdeaWeave</span>
+              <span>Dec. 2025 – Mar. 2026 · Stanford, California, USA · On-site</span>
+              <span>Self-employed · IdeaWeave</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Launched a multi-agent diagram generation product that turns intent into editable diagrams through clarification, generation, canvas refinement, and one-click recording; reached 10K+ impressions and 300+ users.</p>
-                <p class="timeline-text">Designed a telemetry-driven iteration loop around the Planner-Judge-Executor-Validator agent architecture, capturing artifacts and failure modes to support systematic prompt/model debugging and workflow refinement.</p>
+                <p class="timeline-text">Built an AI-powered whiteboard that turns ambiguous ideas into structured, editable diagrams, combining generation, refinement, and recording in one platform.</p>
+                <p class="timeline-text">Launched a multi-agent diagram generation product with clarification, generation, canvas refinement, and one-click recording; reached 10K+ impressions and 300+ users.</p>
+                <p class="timeline-text">Designed a telemetry-driven iteration loop around the Planner-Judge-Executor-Validator architecture, capturing artifacts and failure modes for systematic prompt and model debugging and workflow refinement.</p>
                 <p class="timeline-text">Reduced generation cost by about 87% and latency by about 60% through DSL compilation, model routing, and prompt caching while preserving output quality.</p>
               </div>
 
@@ -406,15 +399,15 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Machine learning infrastructure intern · Galbot</h4>
+              <h4 class="h4 timeline-item-title">Legged Robot Reinforcement Learning Control Intern · Galbot</h4>
 
-              <span>Mar. 2025 – May. 2025 · Beijing, China</span>
+              <span>Mar. 2025 – May 2025 · Beijing, China · On-site</span>
               <span>Internship · Galbot</span>
 
               <div class="timeline-body">
-                <p class="timeline-text">Consolidated fragmented training stacks across simulation backends and ML frameworks into a unified JAX + MuJoCo Playground platform, standardizing configuration and reducing cross-task maintenance.</p>
-                <p class="timeline-text">Validated the end-to-end ML workflow from policy training and simulation evaluation to deployment handoff, reducing training time by 37% versus the previous fragmented workflow.</p>
-                <p class="timeline-text">Documented configuration, debugging, and deployment handoff workflows to lower onboarding costs, standardize experiment transfer, and support cross-team integration.</p>
+                <p class="timeline-text">Consolidated fragmented RL stacks across Isaac Gym/MuJoCo and JAX/PyTorch into a unified JAX + MuJoCo Playground platform, standardizing configuration and reducing cross-task maintenance.</p>
+                <p class="timeline-text">Validated Unitree G1 humanoid locomotion end to end, from policy training and simulation evaluation to sim-to-real deployment; reduced training time by 37%.</p>
+                <p class="timeline-text">Wrote interaction documentation, usage notes, and debugging guidance to lower onboarding costs and support cross-team integration and daily development.</p>
               </div>
 
             </li>

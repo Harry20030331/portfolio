@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="650" viewBox="0 0 1180 650" role="img" aria-labelledby="title desc">
+<title id="title">A sidebar with pinned Leads and project Workers</title>
+<desc id="desc">A two-column workspace schematic. On the left, Secretary and the Leads for Version 2 Model Training and Draft Launch Doc are pinned. Model Training and Data Analysis Workers are grouped under Version 2 Model Training. On the right, the selected model-training Lead holds project context and the ongoing discussion. The launch-document Lead has no Workers.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}.heading{font-size:30px;font-weight:700;fill:#20353f}.thread{font-size:26px;font-weight:700;fill:#20353f}.label{font-size:21px;fill:#20353f}.group{font-size:17px;font-weight:700;fill:#637782}.project{font-size:21px;font-weight:700;fill:#637782}.detail{font-size:22px;fill:#20353f}</style>
+<rect width="1180" height="650" rx="14" fill="#fafbf9"/>
+<text x="36" y="57" class="heading">Projects and roles</text>
+<rect x="30" y="94" width="1120" height="526" rx="16" fill="#fff" stroke="#d7e0e2" stroke-width="1.5"/>
+<path d="M46 94H510V620H46Q30 620 30 604V110Q30 94 46 94Z" fill="#f0f4f4"/>
+<path d="M510 94V620" stroke="#d7e0e2" stroke-width="1.5"/>
+<text x="54" y="136" class="group">PINNED</text>
+<circle cx="64" cy="179" r="6" fill="#128b84"/><text x="84" y="187" class="label">Secretary</text>
+<rect x="48" y="211" width="446" height="48" rx="8" fill="#d9ebe9"/>
+<circle cx="64" cy="235" r="6" fill="#128b84"/><text x="84" y="243" class="label" font-weight="700">Lead · Version 2 Model Training</text>
+<circle cx="64" cy="291" r="6" fill="#128b84"/><text x="84" y="299" class="label">Lead · Draft Launch Doc</text>
+<path d="M54 350H486" stroke="#d7e0e2"/>
+<text x="54" y="394" class="project">Version 2 Model Training</text>
+<circle cx="64" cy="438" r="4" fill="#91a5ae"/><text x="84" y="446" class="label">Worker · Model Training</text>
+<circle cx="64" cy="491" r="4" fill="#91a5ae"/><text x="84" y="499" class="label">Worker · Data Analysis</text>
+<text x="550" y="143" class="group">SELECTED THREAD</text>
+<text x="550" y="191" class="thread">Lead · Version 2 Model Training</text>
+<rect x="550" y="229" width="560" height="154" rx="12" fill="#eaf2f3"/>
+<text x="575" y="265" class="group">PROJECT CONTEXT</text>
+<text x="575" y="307" class="detail">Hypothesis and analysis plan</text>
+<text x="575" y="347" class="detail">Evidence and open questions</text>
+<rect x="550" y="411" width="560" height="178" rx="12" fill="#f5f7f8"/>
+<text x="575" y="447" class="group">DISCUSS HERE</text>
+<text x="575" y="489" class="detail">Examine assumptions</text>
+<text x="575" y="528" class="detail">Interpret findings</text>
+<text x="575" y="567" class="detail">Choose the next experiment</text>
+</svg>

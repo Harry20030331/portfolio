@@ -84,3 +84,12 @@
 
 /* Cite the book title within an article heading or list title. */
 .reading-header h1 cite, .blog-row h3 cite { display:inline; font-style:italic; font-weight:inherit; color:inherit; }
+
+/* Keep translations beside their primary article without nested links. */
+.blog-title-link { min-width:0; }
+.blog-title-link, .blog-title-link:visited, .blog-title-link h3 { color:var(--white-2); }
+.blog-language-link { display:inline-flex; flex:none; align-items:center; color:var(--orange-yellow-crayola); font-size:13px; line-height:1.6; white-space:nowrap; }
+.blog-language-link:hover { text-decoration:underline; text-underline-offset:3px; }
+.blog-row-with-language:hover h3 { color:var(--white-2); }
+.blog-row-with-language .blog-title-link:hover h3 { color:var(--orange-yellow-crayola); }
+.blog-title-link:focus-visible, .blog-language-link:focus-visible, .blog-summary-link:focus-visible { outline:2px solid var(--orange-yellow-crayola); outline-offset:4px; border-radius:3px; }

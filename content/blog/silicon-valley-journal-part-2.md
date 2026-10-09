@@ -5,6 +5,7 @@ date: "2026-06-19"
 summary: "Enthusiasm, peer pressure, career choices, and the people seeking their place in an AI boom."
 lang: "en"
 status: published
+translation_zh: silicon-valley-journal-part-2-zh
 ---
 
 [中文版](../silicon-valley-journal-part-2-zh/) · [← Part I](../silicon-valley-journal/)

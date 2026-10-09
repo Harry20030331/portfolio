@@ -23,3 +23,5 @@ Blog articles and their associated images are versioned rather than ignored. The
 Markdown is rendered with HTML disabled. Use relative links from the final `/portfolio/blog/<slug>/` URL: `../../` for the portfolio, `../../images/<file>` for an approved public image, `../other-slug/` for another article. Only assets explicitly placed in `website/assets/` or `website/images/` are published; these directories are public, including unused files. Keep private attachments here locally until approved. Do not embed local filesystem paths. There is no RSS, sitemap, or search index yet.
 
 Use `pnpm dev` for continuous local review. It renders articles on request, includes drafts locally, and refreshes after Markdown or style saves. It does not change article status, upload files, or run a deployment.
+
+An English article may set `translation_zh: <Chinese article slug>`. The list shows the English article with a 中文版 link when both versions are included; the Chinese page stays accessible but has no separate row. Unpaired articles remain visible.

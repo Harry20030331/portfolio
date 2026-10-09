@@ -10,11 +10,13 @@ const files=git(['ls-files','-z','content/blog','content/x']).split('\0').filter
 let failed=false;
 for (const file of files) {
   if (file === 'content/blog/README.md' || file === 'content/x/README.md') continue;
+  // Image assets are authorized by path and extension; do not decode binary blobs as text.
+  const asset = file.startsWith('content/blog/') && /\.(svg|png|jpe?g|webp|gif)$/.test(file);
+  if (asset) continue;
   // Inspect both staged and working-tree versions for excluded editorial material.
   for (const [label,text] of [['index',git(['show',':'+file])],['working tree',fs.existsSync(file)?fs.readFileSync(file,'utf8'):'']]) {
     const article = /^content\/blog\/[^/]+\.md$/.test(file) && /^---\n[\s\S]*?\nstatus: (draft|published)\n[\s\S]*?---(?:\n|$)/.test(text.replace(/\r\n/g,'\n'));
-    const asset = file.startsWith('content/blog/') && /\.(svg|png|jpe?g|webp|gif)$/.test(file);
-    if (!article && !asset) {
+    if (!article) {
       console.error(`Refusing public source: ${file} (${label}). Only authorized Blog articles and image assets may be tracked.`);failed=true;
     }
   }

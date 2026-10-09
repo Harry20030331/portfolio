@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="630" viewBox="0 0 1400 630" role="img" aria-labelledby="title description">
+  <title id="title">From a Research Question to a Decision</title>
+  <desc id="description">Illustrative ML research workflow. A shared horizontal timeline aligns six stages. Manual work appears above the timeline, intermediate artifacts below it, and human–AI collaboration beneath the artifacts. The framing question and decision sit at either end. No company details, actual outcomes, or timing claims are shown.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#aab8bb" stroke-width="1.6" />
+    </marker>
+    <style>
+      text { font-family:Arial,Helvetica,sans-serif; }
+      .title { font-size:32px; font-weight:700; fill:#20353f; }
+      .eyebrow { font-size:15px; font-weight:700; fill:#128b84; }
+      .lane-title { font-size:21px; font-weight:700; }
+      .manual { font-size:19px; fill:#536f8b; }
+      .stage { font-size:21px; font-weight:700; fill:#20353f; }
+      .role { font-size:18px; font-weight:700; fill:#128b84; }
+      .task { font-size:18px; fill:#31505b; }
+      .artifact { font-size:17px; fill:#40545c; }
+      .side-label { font-size:17px; font-weight:700; fill:#ad793b; }
+      .side-text { font-size:19px; font-weight:700; fill:#20353f; }
+    </style>
+  </defs>
+  <rect width="1400" height="630" rx="14" fill="#fafbf9" />
+  <rect x="28" y="25" width="4" height="17" rx="2" fill="#128b84" />
+  <text x="43" y="39" class="eyebrow">ILLUSTRATIVE ML RESEARCH · HUMAN–AI COLLABORATION</text>
+  <text x="28" y="86" class="title">From a Research Question to a Decision</text>
+  <rect x="190" y="135" width="996" height="150" rx="12" fill="#eaf2f3" />
+  <text x="210" y="165" class="lane-title" fill="#536f8b">Manual Workflow</text>
+  <rect x="190" y="440" width="996" height="166" rx="12" fill="#eaf2f3" />
+  <text x="210" y="584" class="lane-title" fill="#128b84">Human–AI Workflow</text>
+  <path d="M172 340H1220" fill="none" stroke="#aab8bb" stroke-width="1.8" marker-end="url(#arrow)" />
+  <g id="research-question" text-anchor="middle">
+    <text x="89" y="284" class="side-label">Research Question</text>
+    <text x="89" y="313" class="side-text">Why does</text>
+    <text x="89" y="339" class="side-text">performance drop</text>
+    <text x="89" y="365" class="side-text">on one data slice?</text>
+  </g>
+  <g id="research-decision" text-anchor="middle">
+    <text x="1303" y="302" class="side-label">Research Decision</text>
+    <text x="1303" y="330" class="side-text">Keep or revise</text>
+    <text x="1303" y="355" class="side-text">the hypothesis?</text>
+    <text x="1303" y="386" class="side-text">What test is next?</text>
+  </g>
+  <g id="stage-1" text-anchor="middle">
+    <text x="273" y="210" class="manual">Review results</text>
+    <text x="273" y="236" class="manual">Form a hypothesis</text>
+    <text x="273" y="321" class="stage">Hypothesis</text>
+    <circle cx="273" cy="340" r="4" fill="#128b84" />
+    <rect x="196" y="360" width="154" height="63" rx="7" fill="#f0efea" />
+    <text x="273" y="386" class="artifact">Working</text>
+    <text x="273" y="409" class="artifact">hypothesis</text>
+    <text x="273" y="470" class="role">AI proposes</text>
+    <text x="273" y="497" class="role">Human reviews</text>
+    <text x="273" y="524" class="task">Frame the question</text>
+  </g>
+  <path d="M356 185V272M356 457V550" fill="none" stroke="#d1dfe2" stroke-width="1" />
+  <g id="stage-2" text-anchor="middle">
+    <text x="439" y="210" class="manual">Choose groups</text>
+    <text x="439" y="236" class="manual">Set metrics</text>
+    <text x="439" y="262" class="manual">Fix controls</text>
+    <text x="439" y="321" class="stage">Study Design</text>
+    <circle cx="439" cy="340" r="4" fill="#128b84" />
+    <rect x="362" y="360" width="154" height="63" rx="7" fill="#f0efea" />
+    <text x="439" y="386" class="artifact">Comparison</text>
+    <text x="439" y="409" class="artifact">and metrics</text>
+    <text x="439" y="470" class="role">AI drafts</text>
+    <text x="439" y="497" class="role">Human approves</text>
+    <text x="439" y="524" class="task">Design the test</text>
+  </g>
+  <path d="M522 185V272M522 457V550" fill="none" stroke="#d1dfe2" stroke-width="1" />
+  <g id="stage-3" text-anchor="middle">
+    <text x="605" y="210" class="manual">Collect samples</text>
+    <text x="605" y="236" class="manual">Clean data</text>
+    <text x="605" y="262" class="manual">Check filters</text>
+    <text x="605" y="321" class="stage">Prepare Data</text>
+    <circle cx="605" cy="340" r="4" fill="#128b84" />
+    <rect x="528" y="360" width="154" height="63" rx="7" fill="#f0efea" />
+    <text x="605" y="386" class="artifact">Prepared</text>
+    <text x="605" y="409" class="artifact">samples</text>
+    <text x="605" y="470" class="role">AI prepares</text>
+    <text x="605" y="497" class="role">Human checks</text>
+    <text x="605" y="524" class="task">Collect and filter</text>
+  </g>
+  <path d="M688 185V272M688 457V550" fill="none" stroke="#d1dfe2" stroke-width="1" />
+  <g id="stage-4" text-anchor="middle">
+    <text x="771" y="210" class="manual">Run comparisons</text>
+    <text x="771" y="236" class="manual">Inspect errors</text>
+    <text x="771" y="262" class="manual">Interpret patterns</text>
+    <text x="771" y="321" class="stage">Analyze</text>
+    <circle cx="771" cy="340" r="4" fill="#128b84" />
+    <rect x="694" y="360" width="154" height="63" rx="7" fill="#f0efea" />
+    <text x="771" y="386" class="artifact">Results</text>
+    <text x="771" y="409" class="artifact">and errors</text>
+    <text x="771" y="470" class="role">AI runs analysis</text>
+    <text x="771" y="497" class="role">Joint discussion</text>
+    <text x="771" y="524" class="task">Interpret findings</text>
+  </g>
+  <path d="M854 185V272M854 457V550" fill="none" stroke="#d1dfe2" stroke-width="1" />
+  <g id="stage-5" text-anchor="middle">
+    <text x="937" y="210" class="manual">Repeat checks</text>
+    <text x="937" y="236" class="manual">Test alternatives</text>
+    <text x="937" y="262" class="manual">Check robustness</text>
+    <text x="937" y="321" class="stage">Validate</text>
+    <circle cx="937" cy="340" r="4" fill="#128b84" />
+    <rect x="860" y="360" width="154" height="63" rx="7" fill="#f0efea" />
+    <text x="937" y="386" class="artifact">Robustness</text>
+    <text x="937" y="409" class="artifact">evidence</text>
+    <text x="937" y="470" class="role">AI repeats checks</text>
+    <text x="937" y="497" class="role">Human reviews</text>
+    <text x="937" y="524" class="task">Test robustness</text>
+  </g>
+  <path d="M1020 185V272M1020 457V550" fill="none" stroke="#d1dfe2" stroke-width="1" />
+  <g id="stage-6" text-anchor="middle">
+    <text x="1103" y="210" class="manual">Summarize results</text>
+    <text x="1103" y="236" class="manual">Choose next test</text>
+    <text x="1103" y="321" class="stage">Decide</text>
+    <circle cx="1103" cy="340" r="4" fill="#128b84" />
+    <rect x="1026" y="360" width="154" height="63" rx="7" fill="#f0efea" />
+    <text x="1103" y="386" class="artifact">Decision</text>
+    <text x="1103" y="409" class="artifact">and next test</text>
+    <text x="1103" y="470" class="role">AI summarizes</text>
+    <text x="1103" y="497" class="role">Joint judgment</text>
+    <text x="1103" y="524" class="task">Choose next test</text>
+  </g>
+</svg>

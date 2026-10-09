@@ -8,18 +8,5 @@ content/blog/**/editorial-notes.md
 content/x/*
 !content/x/README.md
 
-# Internal research article: approved for LAN review only, not GitHub upload.
-/content/blog/agent-research-workflows.md
-/content/blog/agent-research-workflows/
-
-# Internship reflection remains local until its text is approved for upload.
-/content/blog/tiktok-internship-reflection.md
-
-# Next article drafts stay local until reviewed and approved for upload.
-/content/blog/remote-controller.md
-/content/blog/getting-more.md
-/content/blog/personal-agent-workspace.md
-/content/blog/personal-agent-workspace/
-
-# Recommendation essay remains local until review and upload approval.
-/content/blog/recommendation-in-the-age-of-agents.md
+# Unused original image retained locally; only the reviewed English figure is published.
+/content/blog/remote-controller/images/button-map.png

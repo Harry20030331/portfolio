@@ -63,7 +63,18 @@ function formatTitle(post) {
   return escape(post.title.slice(0,index)) + '<cite>' + escape(book) + '</cite>' + escape(post.title.slice(index+book.length));
 }
 export function renderHome(posts) {
-  const list = posts.map(p=>`<a class="blog-row" href="./blog/${p.slug}/"><div><div class="blog-row-title"><h3>${formatTitle(p)}</h3>${p.review==='pending' && p.status==='draft' ? '<span class="blog-review-status">Pending review</span>' : ''}</div><p>${escape(p.summary)}</p></div>${p.date ? `<time datetime="${p.date}">${p.date}</time>` : ''}</a>`).join('\n') || '<p class="blog-empty">Articles coming soon.</p>';
+  const bySlug = new Map(posts.map(p => [p.slug,p]));
+  const translations = new Set(posts.filter(p => bySlug.has(p.translation_zh)).map(p => p.translation_zh));
+  const list = posts.filter(p => !translations.has(p.slug)).map(p => {
+    const title = formatTitle(p);
+    const review = p.review==='pending' && p.status==='draft' ? '<span class="blog-review-status">Pending review</span>' : '';
+    const date = p.date ? `<time datetime="${p.date}">${p.date}</time>` : '';
+    const href = `./blog/${p.slug}/`;
+    if (!bySlug.has(p.translation_zh)) {
+      return `<a class="blog-row" href="${href}"><div><div class="blog-row-title"><h3>${title}</h3>${review}</div><p>${escape(p.summary)}</p></div>${date}</a>`;
+    }
+    return `<div class="blog-row blog-row-with-language"><div><div class="blog-row-title"><a class="blog-title-link" href="${href}"><h3>${title}</h3></a>${review}<a class="blog-language-link" href="./blog/${p.translation_zh}/" lang="zh-CN" hreflang="zh-CN" aria-label="${escape('Read the Chinese version of '+p.title)}">中文版</a></div><a class="blog-summary-link" href="${href}"><p>${escape(p.summary)}</p></a></div>${date}</div>`;
+  }).join('\n') || '<p class="blog-empty">Articles coming soon.</p>';
   return fs.readFileSync(path.join(root,'index.html'),'utf8').replace('<!-- BLOG_POSTS -->',list);
 }
 function formatWritingDate(date) {
@@ -73,7 +84,7 @@ function formatWritingDate(date) {
 }
 export function renderArticle(post, options = {}) {
   const body=renderBody(post, options);
-  return `<!doctype html><html lang="${escape(post.lang || 'en')}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(post.title)} — Yuming Feng</title><meta name="description" content="${escape(post.summary)}">${post.status==='draft'?'<meta name="robots" content="noindex,nofollow">':''}<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../assets/css/style.css?v=5"><link rel="stylesheet" href="../../website/blog.css?v=2"></head><body class="blog-reading"><div class="reading-wrap"><nav class="reading-nav"><a href="../../#blog">← All Article</a><a href="../../">Yuming Feng</a></nav><main class="reading-main"><header class="reading-header"><h1>${formatTitle(post)}</h1>${post.date ? `<p class="reading-meta"><time datetime="${post.date}">${escape(formatWritingDate(post.date))}</time></p>` : ''}</header><article class="reading-content">${body}</article></main><footer class="reading-footer"><a href="../../#blog">← All Article</a></footer></div></body></html>`;
+  return `<!doctype html><html lang="${escape(post.lang || 'en')}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(post.title)} — Yuming Feng</title><meta name="description" content="${escape(post.summary)}">${post.status==='draft'?'<meta name="robots" content="noindex,nofollow">':''}<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../assets/css/style.css?v=5"><link rel="stylesheet" href="../../website/blog.css?v=3"></head><body class="blog-reading"><div class="reading-wrap"><nav class="reading-nav"><a href="../../#blog">← All Article</a><a href="../../">Yuming Feng</a></nav><main class="reading-main"><header class="reading-header"><h1>${formatTitle(post)}</h1>${post.date ? `<p class="reading-meta"><time datetime="${post.date}">${escape(formatWritingDate(post.date))}</time></p>` : ''}</header><article class="reading-content">${body}</article></main><footer class="reading-footer"><a href="../../#blog">← All Article</a></footer></div></body></html>`;
 }
 
 export function build({preview,output = path.join(root,'dist')} = {}) {

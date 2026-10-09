@@ -3,8 +3,8 @@ import path from 'node:path';
 import http from 'node:http';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
-import {build,root} from '../scripts/build.mjs';
-const output=path.join(root,'.preview/browser');build({preview:'community',output});
+import {build,root,loadPosts} from '../scripts/build.mjs';
+const output=path.join(root,'.preview/browser');build({preview:loadPosts().some(p=>p.slug==='community'&&p.status==='draft')?'community':undefined,output});
 const mime={'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.pdf':'application/pdf'};
 const server=http.createServer((req,res)=>{
  const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);

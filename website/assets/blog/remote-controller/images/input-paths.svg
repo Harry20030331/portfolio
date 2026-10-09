@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="510" viewBox="0 0 1140 510" role="img" aria-labelledby="title desc">
+<title id="title">Two paths from an idea to execution on a computer</title>
+<desc id="desc">A rough idea, still in the mind, branches into two paths. The operations path uses a keyboard and mouse to provide standardized symbols and actions. The expression path uses speech and an agent to interpret and clarify the goal. Both paths lead to execution on the computer.</desc>
+<defs>
+<marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#477baa" stroke-width="1.5"/></marker>
+<marker id="arrow-green" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#238b82" stroke-width="1.5"/></marker>
+</defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#20353f}.title{font-size:28px;font-weight:700}.label{font-size:23px;font-weight:700}.sub{font-size:18px;fill:#637782}.lane{font-size:16px;font-weight:700;letter-spacing:1.2px}.icon{fill:none;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+</style>
+<rect width="1140" height="510" rx="14" fill="#fafbf9"/>
+<text x="36" y="49" class="title">From Idea to Execution</text>
+<text x="295" y="90" class="lane" style="fill:#477baa">OPERATIONS</text>
+<text x="295" y="329" class="lane" style="fill:#238b82">EXPRESSION</text>
+<g fill="none" stroke-width="2">
+<path d="M220 269H250" stroke="#91a5ae"/>
+<path d="M250 269V179H289" stroke="#477baa" marker-end="url(#arrow-blue)"/>
+<path d="M250 269V414H289" stroke="#238b82" marker-end="url(#arrow-green)"/>
+<path d="M550 179H619" stroke="#477baa" marker-end="url(#arrow-blue)"/>
+<path d="M550 414H619" stroke="#238b82" marker-end="url(#arrow-green)"/>
+<path d="M865 179H894V249H929" stroke="#477baa" marker-end="url(#arrow-blue)"/>
+<path d="M865 414H894V289H929" stroke="#238b82" marker-end="url(#arrow-green)"/>
+</g>
+<circle cx="250" cy="269" r="4" fill="#91a5ae"/>
+<rect x="40" y="197" width="180" height="144" rx="14" fill="#fff" stroke="#d7e0e2" stroke-width="1.5"/>
+<g class="icon" stroke="#667c86"><path d="M130 225C126 217 115 218 113 227C103 227 99 238 105 245C100 253 107 262 116 260C119 270 130 268 130 260Z"/><path d="M130 225C134 217 145 218 147 227C157 227 161 238 155 245C160 253 153 262 144 260C141 270 130 268 130 260Z"/><path d="M113 227C112 234 118 236 123 234M105 245C110 240 117 243 117 249M116 260C123 257 121 250 125 248M147 227C148 234 142 236 137 234M155 245C150 240 143 243 143 249M144 260C137 257 139 250 135 248"/></g>
+<text x="130" y="294" class="label" text-anchor="middle">A rough idea</text>
+<text x="130" y="319" class="sub" text-anchor="middle">In your mind</text>
+<rect x="295" y="111" width="255" height="136" rx="14" fill="#edf3f8" stroke="#ccdce8" stroke-width="1.5"/>
+<g class="icon" stroke="#477baa"><rect x="379" y="133" width="57" height="29" rx="4"/><path d="M387 140H391M399 140H403M411 140H415M423 140H427M387 148H391M399 148H403M411 148H415M423 148H427M395 155H421"/><rect x="450" y="129" width="17" height="34" rx="8"/><path d="M458.5 130V142"/></g>
+<text x="422.5" y="195" class="label" text-anchor="middle">Keyboard &amp; mouse</text>
+<text x="422.5" y="223" class="sub" text-anchor="middle">Standardized input</text>
+<rect x="625" y="111" width="240" height="136" rx="14" fill="#edf3f8" stroke="#ccdce8" stroke-width="1.5"/>
+<g class="icon" stroke="#477baa"><path d="M725 139H765M725 150H754M725 161H761"/></g>
+<text x="745" y="195" class="label" text-anchor="middle">Explicit inputs</text>
+<text x="745" y="223" class="sub" text-anchor="middle">Symbols &amp; actions</text>
+<rect x="295" y="346" width="255" height="136" rx="14" fill="#eaf4f1" stroke="#cce3dd" stroke-width="1.5"/>
+<g class="icon" stroke="#238b82"><rect x="415" y="364" width="15" height="25" rx="7.5"/><path d="M406 382V385A16.5 16.5 0 0 0 439 385V382M422.5 402V411M414 411H431"/></g>
+<text x="422.5" y="433" class="label" text-anchor="middle">Speech</text>
+<text x="422.5" y="460" class="sub" text-anchor="middle">Natural expression</text>
+<rect x="625" y="346" width="240" height="136" rx="14" fill="#eaf4f1" stroke="#cce3dd" stroke-width="1.5"/>
+<g class="icon" stroke="#238b82"><rect x="722" y="370" width="46" height="29" rx="7"/><path d="M745 370V362M718 380V390M772 380V390M737 391H753"/><circle cx="735" cy="382" r="1.7"/><circle cx="755" cy="382" r="1.7"/></g>
+<text x="745" y="433" class="label" text-anchor="middle">Agent</text>
+<text x="745" y="460" class="sub" text-anchor="middle">Interpret &amp; clarify</text>
+<rect x="935" y="197" width="165" height="144" rx="14" fill="#fff" stroke="#d7e0e2" stroke-width="1.5"/>
+<g class="icon" stroke="#667c86"><rect x="996" y="219" width="43" height="28" rx="4"/><path d="M1017.5 248V257M1005 257H1030M1005 228H1030M1005 236H1022"/></g>
+<text x="1017.5" y="294" class="label" text-anchor="middle">Execution</text>
+<text x="1017.5" y="319" class="sub" text-anchor="middle">Computer</text>
+</svg>

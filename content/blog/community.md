@@ -1,14 +1,12 @@
 ---
-title: Community: Building Experience and Finding the Next Collaboration
+title: "What Community Makes Possible"
 slug: community
 date: 2026-09-22
 summary: How broader networks and close collaboration help us build a body of work, learn, earn trust, and find where to contribute next.
-status: draft
+status: published
 ---
 
-**Stay curious about the world, and retain the agency to take part in work that excites us and has a tangible impact.**
-
-Community is one way to encounter problems, find collaborators, and become involved. This framework describes how we build experience and relationships, and how they support the next stage of collaboration.
+I’ve been thinking about how community can help me find the work I want to do and build a path toward it. A friend’s experience gives me a concrete starting point for exploring that process.
 
 ## The framework
 
@@ -47,4 +45,4 @@ These three develop alongside and reinforce one another: making visible contribu
 | **Exploration** | Why do I want to work with them? | Information and conversations across both broader and smaller communities help us discover, understand, and choose opportunities. |
 | **Building a foundation** | Why would they want to work with me? | Actual capability and contributions, together with the recognition and recommendations of collaborators. |
 
-**Exploration helps us find somewhere worth going. What we have built gives others a reason to welcome us. Moving from a lab to a team becomes possible when both sides want to collaborate.**
+**Exploration helps us find somewhere worth going. What we have built gives others a reason to welcome us.**
