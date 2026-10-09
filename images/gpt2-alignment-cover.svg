@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title"><title id="title">GPT-2 Alignment: supervised fine-tuning and preference optimization</title><defs><filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#182a42" flood-opacity=".16"/></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f4f0"/><stop offset=".6" stop-color="#e8edf0"/><stop offset="1" stop-color="#cedee7"/></linearGradient>
+<linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eff4f7"/></linearGradient>
+<radialGradient id="halo"><stop stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><g font-family="Arial, Helvetica, sans-serif">
+<rect width="1200" height="675" fill="url(#bg)"/>
+<ellipse cx="300" cy="300" rx="490" ry="480" fill="url(#halo)"/>
+<path d="M720 30q-100 220 100 330t180 315M825 0q-100 220 100 330t180 315" fill="none" stroke="#c3d4de" stroke-width="1.5"/>
+<path d="M69 146h46" stroke="#7998ad" stroke-width="4"/>
+<text x="130" y="154" fill="#79909e" font-size="23" letter-spacing="3">LANGUAGE MODELS</text>
+<text x="66" y="281" fill="#304d61" font-size="92" font-weight="700" letter-spacing="-3">GPT-2</text>
+<text x="66" y="376" fill="#304d61" font-size="80" font-weight="700" letter-spacing="-3">Alignment</text>
+<text x="70" y="441" fill="#718694" font-size="32">Fine-tuning &amp; preferences.</text>
+<g transform="translate(628 114) rotate(-4 220 220)" filter="url(#shadow)">
+<rect x="18" y="22" width="442" height="450" rx="29" fill="#b8ccd8" opacity=".45"/>
+<rect width="442" height="450" rx="29" fill="url(#panel)" stroke="#f9fcff" stroke-width="2"/>
+<text x="32" y="55" fill="#8c9da7" font-size="20" letter-spacing="2">TRAINING PATHS</text>
+<path d="M32 81h378" stroke="#dbe4e9"/>
+<g transform="translate(32 108)"><rect width="378" height="82" rx="16" fill="#e8eef4"/><circle cx="43" cy="41" r="22" fill="#c7d7e4"/><text x="90" y="53" font-size="36" fill="#536e85" font-weight="700">SFT</text><path d="M293 33h47m-47 13h33" stroke="#becedb" stroke-width="5" stroke-linecap="round"/></g>
+<g transform="translate(32 214)"><rect width="378" height="82" rx="16" fill="#e8eff0"/><path d="m27 40 12 12 21-26" stroke="#92abae" stroke-width="6" fill="none" stroke-linecap="round"/><text x="90" y="53" font-size="36" fill="#536f76" font-weight="700">DPO</text><path d="M293 33h47m-47 13h33" stroke="#c1d1d3" stroke-width="5" stroke-linecap="round"/></g>
+<g transform="translate(32 320)"><rect width="378" height="82" rx="16" fill="#54778f"/><text x="40" y="53" font-size="33" fill="#f7fafc" font-weight="700">SFT</text><path d="M131 42h70m-13-11 13 11-13 11" stroke="#c4d9e5" stroke-width="3" fill="none"/><text x="232" y="53" font-size="33" fill="#f7fafc" font-weight="700">DPO</text></g>
+</g></g></svg>

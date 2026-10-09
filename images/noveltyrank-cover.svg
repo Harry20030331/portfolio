@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title"><title id="title">NoveltyRank: discovering novel AI research</title><defs><filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#182a42" flood-opacity=".16"/></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#171f35"/><stop offset="1" stop-color="#28384c"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#7b9395" stop-opacity=".28"/><stop offset="1" stop-color="#7b9395" stop-opacity="0"/></radialGradient>
+<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fafbf9"/><stop offset="1" stop-color="#e7edec"/></linearGradient></defs><g font-family="Arial, Helvetica, sans-serif">
+<rect width="1200" height="675" fill="url(#bg)"/>
+<ellipse cx="925" cy="260" rx="570" ry="520" fill="url(#glow)"/>
+<g fill="none" stroke="#c0d8d4" stroke-opacity=".08"><circle cx="925" cy="335" r="260"/><circle cx="925" cy="335" r="315"/><path d="M610 335h590M925 20v630"/></g>
+<path d="M68 161h46" stroke="#afc8ba" stroke-width="4"/>
+<text x="130" y="169" fill="#aabdc1" font-size="23" letter-spacing="3">AI PAPER DISCOVERY</text>
+<text x="65" y="280" fill="#f3f5f5" font-size="77" font-weight="700" letter-spacing="-3">Novelty<tspan fill="#aec8c0">Rank</tspan></text>
+<text x="69" y="340" fill="#b4c2cb" font-size="34">Finding what’s new.</text>
+<g transform="translate(705 134) rotate(10 190 225)"><rect width="357" height="430" rx="24" fill="#7f9898" opacity=".30"/></g>
+<g transform="translate(660 120) rotate(-7 190 225)"><rect width="365" height="433" rx="24" fill="#81949f" opacity=".54"/></g>
+<g transform="translate(648 127) rotate(3 190 225)" filter="url(#shadow)">
+<rect width="385" height="438" rx="24" fill="url(#paper)"/>
+<path d="M33 75h319" stroke="#cbd6d3"/>
+<rect x="30" y="26" width="30" height="30" rx="8" fill="#e1e9e4"/>
+<path d="M39 35h12m-12 5h12m-12 5h8" stroke="#668476" stroke-width="2"/>
+<text x="75" y="48" fill="#597068" font-size="19" font-weight="700" letter-spacing="1">RESEARCH SIGNAL</text>
+<text x="33" y="133" fill="#2f4941" font-size="29" font-weight="700">Beyond relevance.</text>
+<path d="M35 162h303M35 184h256" stroke="#c5d1cd" stroke-width="7" stroke-linecap="round"/>
+<rect x="30" y="227" width="325" height="94" rx="15" fill="#dce8e0"/>
+<circle cx="74" cy="274" r="24" fill="#bdd2c2"/>
+<path d="m64 274 7 7 15-16" fill="none" stroke="#527463" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="115" y="272" fill="#426151" font-size="24" font-weight="700">Novelty</text>
+<path d="M117 290h191" stroke="#a6bcb0" stroke-width="5" stroke-linecap="round"/>
+<path d="M35 359h235M35 384h298" stroke="#c5d1cd" stroke-width="7" stroke-linecap="round"/>
+</g>
+<g fill="#79938d" opacity=".45"><circle cx="1085" cy="149" r="5"/><circle cx="1071" cy="571" r="3"/><circle cx="588" cy="483" r="4"/></g>
+</g></svg>
