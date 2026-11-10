@@ -103,7 +103,6 @@ export function build({preview,output = path.join(root,'dist')} = {}) {
     const dir=path.join(output,'blog',post.slug);fs.mkdirSync(dir,{recursive:true});
     fs.writeFileSync(path.join(dir,'index.html'),renderArticle(post));
   }
-  fs.cpSync(path.join(root,'website/health-personal-readonly'),path.join(output,'health-personal-readonly'),{recursive:true});
   fs.writeFileSync(path.join(output,'.nojekyll'),'');
   console.log(`Built ${selected.length} article(s)${preview ? `; approved draft preview: ${preview}` : ''} → ${output}`);
 }
