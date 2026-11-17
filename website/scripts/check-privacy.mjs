@@ -13,6 +13,13 @@ for (const file of files) {
   // Image assets are authorized by path and extension; do not decode binary blobs as text.
   const asset = file.startsWith('content/blog/') && /\.(svg|png|jpe?g|webp|gif)$/.test(file);
   if (asset) continue;
+  // User-approved slide PDF accompanying the memory article.
+  if (file === 'content/blog/when-is-memory-curation-worth-it/slides.pdf') {
+    const staged = execFileSync('git', ['show', ':'+file], {cwd:root,env});
+    const working = fs.readFileSync(file);
+    if ([staged,working].every(data => data.subarray(0,5).toString() === '%PDF-')) continue;
+    console.error('Invalid approved PDF: '+file); failed=true; continue;
+  }
   // Inspect both staged and working-tree versions for excluded editorial material.
   for (const [label,text] of [['index',git(['show',':'+file])],['working tree',fs.existsSync(file)?fs.readFileSync(file,'utf8'):'']]) {
     const article = /^content\/blog\/[^/]+\.md$/.test(file) && /^---\n[\s\S]*?\nstatus: (draft|published)\n[\s\S]*?---(?:\n|$)/.test(text.replace(/\r\n/g,'\n'));

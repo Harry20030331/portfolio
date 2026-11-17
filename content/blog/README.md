@@ -25,3 +25,5 @@ Markdown is rendered with HTML disabled. Use relative links from the final `/por
 Use `pnpm dev` for continuous local review. It renders articles on request, includes drafts locally, and refreshes after Markdown or style saves. It does not change article status, upload files, or run a deployment.
 
 An English article may set `translation_zh: <Chinese article slug>`. The list shows the English article with a 中文版 link when both versions are included; the Chinese page stays accessible but has no separate row. Unpaired articles remain visible.
+
+For slide-led articles, render each PDF page as an image and display the pages in order using ordinary Markdown images. Keep the draft images and original PDF under `content/blog/<slug>/`; include direct PDF and original-deck links above the pages. The local preview can read these assets. Public builds require explicit approval before placing them under `website/assets/blog/<slug>/`.
