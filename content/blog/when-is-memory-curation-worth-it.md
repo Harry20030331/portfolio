@@ -4,7 +4,7 @@ slug: when-is-memory-curation-worth-it
 date: 2026-11-06
 summary: "A paper discussion and follow-up experiment on when memory curation is useful for LLM agents."
 lang: en
-status: draft
+status: published
 ---
 
 I read [Filesystem-Based Memory for LLM Agents: Organization, Evolution, and Sustainability](https://arxiv.org/abs/2607.26637), discussed when memory curation is useful, and ran a small follow-up experiment to explore how its value depends on the model and task.

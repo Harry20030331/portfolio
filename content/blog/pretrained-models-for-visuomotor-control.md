@@ -4,7 +4,7 @@ slug: pretrained-models-for-visuomotor-control
 date: 2026-11-16
 summary: "How VLA models, world models, and LLM-as-policy systems turn pretrained knowledge into robot actions, and what limits their transfer."
 lang: en
-status: draft
+status: published
 ---
 
 ## Introduction
